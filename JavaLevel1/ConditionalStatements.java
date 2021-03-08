@@ -131,7 +131,7 @@ class EligibleForExam {
         int iClassH = sc.nextInt();
         System.out.println("Total Number of classes Attended: ");
         int iClassA = sc.nextInt();
-        int iEligible = (iClassA / iClassH)*100;
+        int iEligible = (iClassA *100)/ iClassH;
         //System.out.println(iEligible);
         System.out.println("Percentage of classes attended by the user is "+iEligible);
         if (iEligible > 75) {
@@ -151,7 +151,7 @@ class EligibleForExamMed {
         int iClassA = sc.nextInt();
         System.out.println("Enter medical certificate Y/N : ");
         String sMedCert = sc.next();
-        double iEligible = (iClassA/iClassH) * 100;
+        double iEligible = (iClassA* 100)/iClassH;
         System.out.println("Percentage of classes attended by the user is " +iEligible+"%");
         if (iEligible < 75 && sMedCert.equalsIgnoreCase("y"))
             System.out.println("The student is  allowed to sit in exam");
