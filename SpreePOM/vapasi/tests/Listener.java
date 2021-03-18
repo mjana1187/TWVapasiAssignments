@@ -23,7 +23,11 @@ public class Listener implements ITestListener {
     public void onTestSuccess(ITestResult iTestResult) {
         String testMethodName=iTestResult.getMethod().getMethodName();
         System.out.println("Test passed: "+testMethodName);
-
+        try {
+            getScreenshotPath(testMethodName,iTestResult);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -31,7 +35,6 @@ public class Listener implements ITestListener {
         String testMethodName=iTestResult.getMethod().getMethodName();
         System.out.println("Test Failed: "+testMethodName);
         try {
-
             getScreenshotPath(testMethodName,iTestResult);
         } catch (IOException e) {
             e.printStackTrace();
