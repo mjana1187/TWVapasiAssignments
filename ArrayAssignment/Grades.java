@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class Grades {
     public static void main(String[] args) {
-        int iMax, iMin;
-        int intGradeSum = iMax = iMin = 0;
+        int intGradeSum = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Student grade: ");
+        System.out.println("Enter number of Student grades: ");
         int iNumOfGrades = sc.nextInt();
+        System.out.println("Enter grades: ");
         int[] iStudGradeArr = new int[iNumOfGrades];
 
         for (int i = 0;i<iNumOfGrades;i++){
